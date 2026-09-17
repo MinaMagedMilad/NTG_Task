@@ -1,6 +1,7 @@
 package com.wikipedia.automation.pages;
 
 import io.appium.java_client.AppiumDriver;
+import io.appium.java_client.AppiumBy;
 import org.openqa.selenium.By;
 
 /**
@@ -10,7 +11,7 @@ import org.openqa.selenium.By;
 public class SaveToReadingListDialog extends BasePage {
 
     private final By dialogTitle = By.id("org.wikipedia:id/onboarding_message");
-    private final By createNewListOption = By.AccessibilityId("Create new reading list");
+    private final By createNewListOption = AppiumBy.accessibilityId("Create new reading list");
     private final By newListNameInput = By.id("org.wikipedia:id/text_input");
     private final By newListCreateConfirm = By.id("org.wikipedia:id/onboarding_button");
     private final By existingListItem = By.id("org.wikipedia:id/item_title");

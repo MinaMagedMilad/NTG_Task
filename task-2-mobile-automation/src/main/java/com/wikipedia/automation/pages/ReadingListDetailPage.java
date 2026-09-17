@@ -1,6 +1,7 @@
 package com.wikipedia.automation.pages;
 
 import io.appium.java_client.AppiumDriver;
+import io.appium.java_client.AppiumBy;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.PointerInput;
@@ -12,8 +13,8 @@ import java.util.Collections;
 public class ReadingListDetailPage extends BasePage {
 
     private final By articleRow = By.id("org.wikipedia:id/page_list_item_title");
-    private final By overflowMenuButton = By.AccessibilityId("More options");
-    private final By removeFromListOption = By.AccessibilityId("Remove from this list");
+    private final By overflowMenuButton = AppiumBy.accessibilityId("More options");
+    private final By removeFromListOption = AppiumBy.accessibilityId("Remove from this list");
     private final By emptyStateMessage = By.id("org.wikipedia:id/read_list_empty_text");
 
     public ReadingListDetailPage(AppiumDriver driver) {

@@ -1,6 +1,7 @@
 package com.wikipedia.automation.pages;
 
 import io.appium.java_client.AppiumDriver;
+import io.appium.java_client.AppiumBy;
 import org.openqa.selenium.By;
 
 /**
@@ -16,7 +17,7 @@ import org.openqa.selenium.By;
  */
 public class MainPage extends BasePage {
 
-    private final By searchTab = By.AccessibilityId("Search Wikipedia");
+    private final By searchTab = AppiumBy.accessibilityId("Search Wikipedia");
     private final By skipOnboardingButton = By.id("org.wikipedia:id/fragment_onboarding_skip_button");
     private final By explorFeed = By.id("org.wikipedia:id/fragment_feed_feed");
 

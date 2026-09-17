@@ -1,6 +1,7 @@
 package com.wikipedia.automation.pages;
 
 import io.appium.java_client.AppiumDriver;
+import io.appium.java_client.AppiumBy;
 import org.openqa.selenium.By;
 
 /**
@@ -9,8 +10,8 @@ import org.openqa.selenium.By;
  */
 public class ReadingListsPage extends BasePage {
 
-    private final By savedTab = By.AccessibilityId("Saved");
-    private final By searchListsButton = By.AccessibilityId("Search reading lists");
+    private final By savedTab = AppiumBy.accessibilityId("Saved");
+    private final By searchListsButton = AppiumBy.accessibilityId("Search reading lists");
     private final By searchListsInput = By.id("org.wikipedia:id/search_src_text");
     private final By listNameCell = By.id("org.wikipedia:id/item_title");
 

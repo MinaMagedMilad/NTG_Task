@@ -1,6 +1,7 @@
 package com.wikipedia.automation.pages;
 
 import io.appium.java_client.AppiumDriver;
+import io.appium.java_client.AppiumBy;
 import org.openqa.selenium.By;
 
 public class ArticlePage extends BasePage {
@@ -11,8 +12,8 @@ public class ArticlePage extends BasePage {
     // saved article opens/removes it. Long variants of the Wikipedia app
     // route "add to a specific list" through the overflow/bookmark-long-press
     // flow captured in SaveToReadingListDialog.
-    private final By saveButton = By.AccessibilityId("Save page");
-    private final By savedButtonState = By.AccessibilityId("Saved");
+    private final By saveButton = AppiumBy.accessibilityId("Save page");
+    private final By savedButtonState = AppiumBy.accessibilityId("Saved");
 
     public ArticlePage(AppiumDriver driver) {
         super(driver);
