@@ -1,0 +1,24 @@
+# Override any of these at the CLI, e.g.:
+#   pytest --platform=ios --device-name="iPhone 15"
+
+appium_server_url: "http://127.0.0.1:4723"
+
+android:
+  device_name: "Pixel_7_API_34"
+  platform_version: "14"
+  automation_name: "UiAutomator2"
+  app_package: "org.wikipedia"
+  app_activity: "org.wikipedia.main.MainActivity"
+  # Path to the Wikipedia APK. Download it and place it here, or leave
+  # missing to attach to an already-installed build via app_package/app_activity.
+  app_path: "./apps/wikipedia.apk"
+
+ios:
+  device_name: "iPhone 15"
+  platform_version: "17.5"
+  automation_name: "XCUITest"
+  bundle_id: "org.wikimedia.wikipedia"
+  app_path: "./apps/wikipedia.app"
+
+implicit_wait_seconds: 10
+explicit_wait_seconds: 20

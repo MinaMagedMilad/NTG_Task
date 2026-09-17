@@ -1,0 +1,28 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<!--
+  Two <test> blocks so Android and iOS run as independent, parallel
+  suites (parallel="tests"). Each sets the `platform` system property
+  that ConfigReader/DriverManager reads, so the same TestRunner/feature
+  files execute against whichever platform the test block specifies -
+  no duplicated step definitions or feature files per platform.
+
+  Run everything:      mvn test
+  Run Android only:    mvn test -DsuiteXmlFile=testng.xml -Dgroups=android  (or comment out the iOS <test> block)
+-->
+<suite name="Wikipedia Mobile Suite" parallel="tests" thread-count="2">
+
+    <test name="Android">
+        <parameter name="platform" value="android"/>
+        <classes>
+            <class name="com.wikipedia.automation.runners.TestRunner"/>
+        </classes>
+    </test>
+
+    <test name="iOS">
+        <parameter name="platform" value="ios"/>
+        <classes>
+            <class name="com.wikipedia.automation.runners.TestRunner"/>
+        </classes>
+    </test>
+
+</suite>
